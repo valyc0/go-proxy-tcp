@@ -1,0 +1,12 @@
+start :
+go run tcp_proxy.go
+
+esempio:
+go run tcp_proxy.go 8090 localhost:8080
+
+# creare eseguibile linux
+GOOS=linux GOARCH=amd64 go build -o tcp_proxy_linux tcp_proxy.go
+
+
+# creare eseguibile windows:
+GOOS=windows GOARCH=amd64 go build -o tcp_proxy_windows.exe tcp_proxy.go
